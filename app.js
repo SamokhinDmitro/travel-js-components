@@ -12,9 +12,9 @@ const PORT = process.env.PORT || 3000;
 
 let connection = mysql.createPool({
     host: 'remotemysql.com',
-    user: 'rjafWD8Va9',
-    password: 'XXcSytTbHW',
-    database: 'rjafWD8Va9'
+    user: 'CYpLql35qV',
+    password: 'LBpLLTEBej',
+    database: 'CYpLql35qV'
 });
 
 //Шаблонизатор
@@ -52,9 +52,17 @@ app.post('/phones', function(req,res){
     });
 });
 
+
+app.get('/contacts', function(req,res){
+   connection.query('SELECT * from usersinfo', function (err, rows) {
+       if (err) throw new Error;
+       res.json(rows);
+   });
+});
+
 app.post('/contacts', function(req,res){
    let data = req.body;
-console.log(data);
+    console.log(data);
 
    connection.query('INSERT INTO usersinfo SET ?', [data],  function(err,rows){
        if (err) throw new Error;
@@ -67,6 +75,6 @@ app.use(function(req, res, next){
 });
 
 app.listen(PORT, function(){
-    console.log(`Прослушиваем порт по адрессу`);
+    console.log(`Прослушиваем порт по адрессу ${PORT}`);
 });
 
