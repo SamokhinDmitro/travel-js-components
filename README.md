@@ -14,5 +14,5 @@
 
 БД размещенна на удаленном сервере от [remotemysql.com](http://remotemysql.com)
 Серверная и клиентская часть размещенна на Heroku
-[Ссылка на проект](https://infinite-forest-03818.herokuapp.com/)
+[Ссылка на проект](https://travel-js-component.herokuapp.com/)
 
