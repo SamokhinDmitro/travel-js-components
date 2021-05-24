@@ -12,8 +12,8 @@ const PORT = process.env.PORT || 3000;
 
 let connection = mysql.createPool({
     host: 'remotemysql.com',
-    user: 'CYpLql35qV',
-    password: 'LBpLLTEBej',
+    user: '2GiFkH15gV',
+    password: '2GiFkH15gV',
     database: 'CYpLql35qV'
 });
 
